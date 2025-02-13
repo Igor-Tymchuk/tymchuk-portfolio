@@ -86,11 +86,7 @@ const items = [
 
 function App() {
   Background();
-  return (
-    <div>
-      <LogoWall items={items} />
-    </div>
-  );
+  return <LogoWall items={items} />;
 }
 
 export default App;

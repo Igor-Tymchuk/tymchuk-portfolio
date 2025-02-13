@@ -1,15 +1,8 @@
-:root {
-  --ff-bgcColor: rgb(0, 0, 0);
-}
-
-.light-theme {
-  --ff-bgcColor: rgb(255, 255, 255);
-}
-
 #root {
   max-width: 1280px;
+  min-width: 360px;
+  padding: 0 15px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -19,7 +12,7 @@
   left: 0;
 }
 canvas {
-  background-color: var(--ff-bgcColor);
+  background-color: black;
   position: absolute;
   top: 0;
   left: 0;

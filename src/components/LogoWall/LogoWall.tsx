@@ -9,14 +9,15 @@ interface LogoWallProps {
 
 const LogoWall: React.FC<LogoWallProps> = ({ items }) => {
   return (
-    <>
-      <Marquee speed={50} pauseOnHover>
+    <div style={{ overflow: "hidden" }}>
+      <Marquee speed={50} pauseOnHover style={{ maxWidth: "100%" }}>
         {items.map((item, index) => (
           <div
             key={index}
             style={{
               borderRadius: "5px",
               width: "120px",
+              height: "130px",
               padding: "15px 20px 2px 20px",
               margin: "10px",
               textAlign: "center",
@@ -30,13 +31,19 @@ const LogoWall: React.FC<LogoWallProps> = ({ items }) => {
           </div>
         ))}
       </Marquee>
-      <Marquee speed={40} pauseOnHover direction="right">
+      <Marquee
+        speed={40}
+        pauseOnHover
+        direction="right"
+        style={{ maxWidth: "100%" }}
+      >
         {items.map((item, index) => (
           <div
             key={index}
             style={{
               borderRadius: "5px",
               width: "120px",
+              height: "130px",
               padding: "15px 20px 2px 20px",
               margin: "10px",
               textAlign: "center",
@@ -50,7 +57,7 @@ const LogoWall: React.FC<LogoWallProps> = ({ items }) => {
           </div>
         ))}
       </Marquee>
-    </>
+    </div>
   );
 };
 export default LogoWall;
