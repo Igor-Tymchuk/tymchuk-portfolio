@@ -1,3 +1,11 @@
+:root {
+  --ff-bgcColor: rgb(0, 0, 0);
+}
+
+.light-theme {
+  --ff-bgcColor: rgb(255, 255, 255);
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,15 +13,15 @@
   text-align: center;
 }
 
-.div_bg {
+.body {
   position: relative;
   top: 0;
   left: 0;
 }
 canvas {
-  background-color: #000;
+  background-color: var(--ff-bgcColor);
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -10;
 }
