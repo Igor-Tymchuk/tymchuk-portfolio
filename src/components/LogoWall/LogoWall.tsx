@@ -1,4 +1,5 @@
 import Marquee from "react-fast-marquee";
+import s from "./LogoWall.module.css";
 interface Item {
   img: string;
   title: string;
@@ -9,51 +10,20 @@ interface LogoWallProps {
 
 const LogoWall: React.FC<LogoWallProps> = ({ items }) => {
   return (
-    <div style={{ overflow: "hidden" }}>
-      <Marquee speed={50} pauseOnHover style={{ maxWidth: "100%" }}>
+    <div className={s.box}>
+      <Marquee speed={50} pauseOnHover className={s.marquee}>
         {items.map((item, index) => (
-          <div
-            key={index}
-            style={{
-              borderRadius: "5px",
-              width: "120px",
-              height: "130px",
-              padding: "15px 20px 2px 20px",
-              margin: "10px",
-              textAlign: "center",
-              backgroundColor: "#223333dd",
-            }}
-          >
+          <div key={index} className={s.subBox1}>
             <img src={item.img} alt={item.title} width="80" />
-            <h3 style={{ color: "wheat", fontFamily: "monospace" }}>
-              {item.title}
-            </h3>
+            <h3>{item.title}</h3>
           </div>
         ))}
       </Marquee>
-      <Marquee
-        speed={40}
-        pauseOnHover
-        direction="right"
-        style={{ maxWidth: "100%" }}
-      >
+      <Marquee speed={40} pauseOnHover direction="right" className={s.marquee}>
         {items.map((item, index) => (
-          <div
-            key={index}
-            style={{
-              borderRadius: "5px",
-              width: "120px",
-              height: "130px",
-              padding: "15px 20px 2px 20px",
-              margin: "10px",
-              textAlign: "center",
-              backgroundColor: "#222233dd",
-            }}
-          >
+          <div key={index} className={s.subBox2}>
             <img src={item.img} alt={item.title} width="80" />
-            <h3 style={{ color: "wheat", fontFamily: "monospace" }}>
-              {item.title}
-            </h3>
+            <h3>{item.title}</h3>
           </div>
         ))}
       </Marquee>

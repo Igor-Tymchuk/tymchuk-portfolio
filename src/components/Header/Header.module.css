@@ -1,0 +1,43 @@
+.header {
+  border: 1px solid #005566;
+  color: rgb(255, 255, 255);
+  border-radius: 5px 38px 5px 38px;
+  background-color: #004455dd;
+  display: flex;
+  padding: 10px 20px;
+  font-size: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  position: relative;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(228, 231, 20);
+  text-shadow: 1px 1px 20px black;
+  & span {
+    font-family: "Indie Flower", serif;
+    font-size: 28px;
+    color: dodgerblue;
+  }
+  & p {
+    color: white;
+    position: absolute;
+    bottom: -2px;
+    right: -4px;
+    font-size: 12px;
+  }
+}
+.navList {
+  display: flex;
+  text-shadow: 1px 1px 20px black;
+  gap: 20px;
+  font-size: 20px;
+  & li a {
+    transition: all 250ms ease-in-out;
+  }
+}
+a:hover {
+  color: rgb(228, 231, 20);
+  transform: scale(1.1);
+}

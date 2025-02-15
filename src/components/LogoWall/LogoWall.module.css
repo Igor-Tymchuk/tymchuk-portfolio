@@ -1,0 +1,24 @@
+.box {
+  overflow: hidden;
+}
+.marquee {
+  max-width: 100%;
+}
+.subBox1 {
+  border-radius: 5px;
+  place-items: center;
+  width: 120px;
+  height: 130px;
+  padding: 15px 15px 2px;
+  margin: 10px;
+  text-align: center;
+  background-color: #223333dd;
+  & h3 {
+    color: white;
+    font-size: 14px;
+  }
+}
+.subBox2 {
+  composes: subBox1;
+  background-color: #222233dd;
+}
