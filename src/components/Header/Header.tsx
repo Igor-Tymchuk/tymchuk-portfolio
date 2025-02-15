@@ -9,18 +9,16 @@ const Header: React.FC = () => {
         </div>
         <p>Make your WEB world better...</p>
       </div>
-      <nav>
-        <ul className={s.navList}>
-          <li>
-            <a href="">About Me</a>
-          </li>
-          <li>
-            <a href="">Projects</a>
-          </li>
-          <li>
-            <a href="">Contacts</a>
-          </li>
-        </ul>
+      <nav className={s.navList}>
+        <a className={s.link} href="#">
+          About Me
+        </a>
+        <a className={s.link} href="#">
+          Projects
+        </a>
+        <a className={s.link} href="#">
+          Contacts
+        </a>
       </nav>
     </header>
   );

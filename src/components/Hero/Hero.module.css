@@ -1,0 +1,73 @@
+.hero {
+  border: 1px solid rgba(146, 148, 248, 0.5);
+  color: rgb(255, 255, 255);
+  border-radius: 38px 5px 38px 5px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../../images/hero.webp);
+  height: 718px;
+  display: flex;
+  padding: 10px 20px;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 50px;
+  background: #232323;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 50px;
+  color: #ff0;
+  font-size: 20px;
+  font-family: "Play";
+  letter-spacing: 4px;
+  /*    border-radius: 20px; */
+}
+
+.button:before,
+.button:after,
+span:before,
+span:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #ff0;
+  transition: 1s;
+  mix-blend-mode: hue;
+}
+
+.button:before {
+  top: -2px;
+  left: -2px;
+}
+.button:after {
+  top: -2px;
+  right: -2px;
+}
+span:before {
+  bottom: -2px;
+  left: -2px;
+}
+span:after {
+  bottom: -2px;
+  right: -2px;
+}
+
+.button:hover:before,
+.button:hover:after,
+.button:hover span:before,
+.button:hover span:after {
+  width: calc(180px / 2);
+  height: calc(50px / 2);
+}
