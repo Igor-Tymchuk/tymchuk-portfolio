@@ -5,7 +5,7 @@ const Header: React.FC = () => {
     <header className={s.header}>
       <div className={s.logo}>
         <div>
-          Tymchuk<span>DEVELOPER</span>
+          TYMCHUK<span>DEVELOPER</span>
         </div>
         <p>Make your WEB world better...</p>
       </div>
@@ -14,7 +14,7 @@ const Header: React.FC = () => {
           About Me
         </a>
         <a className={s.link} href="#">
-          Projects
+          My Projects
         </a>
         <a className={s.link} href="#">
           Contacts
