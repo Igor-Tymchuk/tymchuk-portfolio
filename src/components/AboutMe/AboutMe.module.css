@@ -14,9 +14,11 @@
 }
 .textBlock {
   & h2 {
+    color: dodgerblue;
     margin-left: 15px;
   }
   & h3 {
+    color: dodgerblue;
     margin-top: 20px;
     margin-left: 15px;
   }

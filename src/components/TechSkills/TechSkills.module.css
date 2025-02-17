@@ -1,6 +1,6 @@
 .box {
   overflow: hidden;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .title {
   text-align: center;
@@ -28,5 +28,5 @@
 .subBox2 {
   composes: subBox1;
   background-color: #222233dd;
-  margin-top: 10px;
+  margin-top: 15px;
 }

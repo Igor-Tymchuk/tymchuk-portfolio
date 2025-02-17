@@ -1,20 +1,16 @@
-interface Item {
+export interface Item {
   img: string;
   title: string;
 }
 
-export const items: Item[] = [
+export const baseSkills: Item[] = [
   {
-    img: "/icons/chatgpt.svg",
-    title: "ChatGPT",
+    img: "/icons/html.svg",
+    title: "HTML5",
   },
   {
-    img: "/icons/restapi.svg",
-    title: "REST API",
-  },
-  {
-    img: "/icons/vite.svg",
-    title: "Vite",
+    img: "/icons/css.svg",
+    title: "CSS3",
   },
   {
     img: "/icons/js.svg",
@@ -25,12 +21,22 @@ export const items: Item[] = [
     title: "Type Script",
   },
   {
-    img: "/icons/html.svg",
-    title: "HTML5",
+    img: "/icons/react.svg",
+    title: "React.JS",
+  },
+
+  {
+    img: "/icons/node-js.svg",
+    title: "Node.JS",
+  },
+
+  {
+    img: "/icons/sass.svg",
+    title: "Sass",
   },
   {
-    img: "/icons/css.svg",
-    title: "CSS3",
+    img: "/icons/tailwind.svg",
+    title: "Tailwind",
   },
   {
     img: "/icons/figma.svg",
@@ -48,13 +54,24 @@ export const items: Item[] = [
     img: "/icons/github.svg",
     title: "GitHub",
   },
+];
+
+export const additionalSkills: Item[] = [
+  {
+    img: "/icons/chatgpt.svg",
+    title: "ChatGPT",
+  },
+  {
+    img: "/icons/restapi.svg",
+    title: "REST API",
+  },
+  {
+    img: "/icons/vite.svg",
+    title: "Vite",
+  },
   {
     img: "/icons/mongodb.svg",
     title: "MongoDB",
-  },
-  {
-    img: "/icons/node-js.svg",
-    title: "Node.JS",
   },
   {
     img: "/icons/npm.svg",
@@ -71,18 +88,6 @@ export const items: Item[] = [
   {
     img: "/icons/redux.svg",
     title: "Redux",
-  },
-  {
-    img: "/icons/react.svg",
-    title: "React.JS",
-  },
-  {
-    img: "/icons/sass.svg",
-    title: "Sass",
-  },
-  {
-    img: "/icons/tailwind.svg",
-    title: "Tailwind",
   },
   {
     img: "/icons/vercel.svg",
