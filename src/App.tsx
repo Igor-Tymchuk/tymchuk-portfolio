@@ -2,8 +2,9 @@ import "./styles/index.css";
 import Background from "./assets/Background.ts";
 import { items } from "./assets/techSkills.ts";
 import Header from "./components/Header/Header.tsx";
-import LogoWall from "./components/LogoWall/LogoWall.tsx";
+import TechSkills from "./components/TechSkills/TechSkills.tsx";
 import Hero from "./components/Hero/Hero.tsx";
+import AboutMe from "./components/AboutMe/AboutMe.tsx";
 
 function App() {
   Background();
@@ -11,7 +12,8 @@ function App() {
     <>
       <Header />
       <Hero />
-      <LogoWall items={items} />
+      <AboutMe />
+      <TechSkills items={items} />
     </>
   );
 }

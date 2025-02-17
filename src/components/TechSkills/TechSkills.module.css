@@ -1,6 +1,11 @@
 .box {
   overflow: hidden;
-  margin: 10px 0;
+  margin-bottom: 10px;
+}
+.title {
+  text-align: center;
+  color: white;
+  font-size: 38px;
 }
 .marquee {
   max-width: 100%;
