@@ -1,14 +1,10 @@
+import Logo from "../Logo/Logo.tsx";
 import s from "./Header.module.css";
 
 const Header: React.FC = () => {
   return (
     <header className={s.header}>
-      <div className={s.logo}>
-        <div>
-          TYMCHUK<span>DEVELOPER</span>
-        </div>
-        <p>Make your WEB world better...</p>
-      </div>
+      <Logo />
       <nav className={s.navList}>
         <a className={s.link} href="#">
           About Me

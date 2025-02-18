@@ -29,6 +29,7 @@ const MyProjects: React.FC<MyProjectsProps> = ({ myProjects }) => {
   }, [visibleProjects]);
   return (
     <div className={s.container}>
+      <h2>MY PROJECTS</h2>
       <ul className={s.list}>
         {myProjects.slice(0, visibleProjects).map((project, index) => (
           <motion.li

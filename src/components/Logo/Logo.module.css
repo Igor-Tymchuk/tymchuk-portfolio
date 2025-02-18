@@ -1,0 +1,18 @@
+.logo {
+  position: relative;
+  color: yellow;
+  font-size: 28px;
+  text-shadow: 2px 2px 20px black;
+  & span {
+    font-family: "Indie Flower", serif;
+    font-size: 32px;
+    color: dodgerblue;
+  }
+  & p {
+    color: white;
+    position: absolute;
+    bottom: -2px;
+    right: -4px;
+    font-size: 14px;
+  }
+}
