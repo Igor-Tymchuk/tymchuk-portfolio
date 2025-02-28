@@ -7,6 +7,7 @@ const Footer: React.FC = () => {
     <footer className="section">
       <div className={clsx("container", s.container)}>
         <Logo />
+        <img src="https://ghchart.rshah.org/Igor-Tymchuk" alt="GitHub chart" />
         <p>All rights reserved &copy; 2025</p>
       </div>
     </footer>

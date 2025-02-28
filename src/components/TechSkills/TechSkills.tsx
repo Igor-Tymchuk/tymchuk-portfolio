@@ -15,15 +15,15 @@ const TechSkills: React.FC<TechSkills> = ({ base, additional }) => {
       <Marquee speed={50} pauseOnHover className={s.marquee}>
         {base.map((item, index) => (
           <div key={index} className={s.subBox1}>
-            <img src={item.img} alt={item.title} width="80" />
+            <img src={item.img} alt={item.title} width="80" className={s.img} />
             <h3>{item.title}</h3>
           </div>
         ))}
       </Marquee>
       <Marquee speed={40} pauseOnHover direction="right" className={s.marquee}>
         {additional.map((item, index) => (
-          <div key={index} className={s.subBox2}>
-            <img src={item.img} alt={item.title} width="80" />
+          <div key={index} className={clsx(s.subBox1, s.subBox2)}>
+            <img src={item.img} alt={item.title} width="80" className={s.img} />
             <h3>{item.title}</h3>
           </div>
         ))}

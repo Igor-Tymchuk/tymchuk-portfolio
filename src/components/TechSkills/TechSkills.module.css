@@ -15,19 +15,22 @@
 .subBox1 {
   border-radius: 5px;
   place-items: center;
-  width: 140px;
-  height: 140px;
-  padding: 15px 15px 2px;
+  width: 160px;
+  height: 160px;
+  padding: 15px 10px 2px;
   margin: 0 10px;
   text-align: center;
-  background-image: linear-gradient(180deg, #181a2fd8 0%, #16182dd8 100%);
+  background-image: linear-gradient(180deg, #1b3a64d8 0%, #16182dd8 100%);
   & h3 {
     color: white;
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 .subBox2 {
-  composes: subBox1;
-  background-image: linear-gradient(180deg, #181e2fd8 0%, #161e2dd8 100%);
+  background-image: linear-gradient(180deg, #015c4ed8 0%, #161e2dd8 100%);
   margin-top: 15px;
+}
+.img {
+  width: 100px;
+  height: 100px;
 }

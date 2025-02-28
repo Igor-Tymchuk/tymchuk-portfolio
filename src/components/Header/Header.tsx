@@ -1,9 +1,11 @@
-import LanguageSwitcher from "../LanguageSwitcher.tsx";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher.tsx";
 import Logo from "../Logo/Logo.tsx";
 import s from "./Header.module.css";
 import clsx from "clsx";
 
 const Header: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <header className="section">
       <div className={clsx("container", s.headerContainer)}>
@@ -12,13 +14,13 @@ const Header: React.FC = () => {
           <LanguageSwitcher />
           <nav className={s.navList}>
             <a className="button" href="#">
-              About Me
+              {t("about_me")}
             </a>
             <a className="button" href="#">
-              My Projects
+              {t("my_projects")}
             </a>
             <a className="button" href="#">
-              Contacts
+              {t("contacts")}
             </a>
           </nav>
         </div>
