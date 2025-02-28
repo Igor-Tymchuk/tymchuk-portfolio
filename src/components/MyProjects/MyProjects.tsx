@@ -2,6 +2,7 @@ import { MyProject } from "../../assets/myProjects.ts";
 import s from "./MyProjects.module.css";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import clsx from "clsx";
 
 interface MyProjectsProps {
   myProjects: MyProject[];
@@ -28,39 +29,41 @@ const MyProjects: React.FC<MyProjectsProps> = ({ myProjects }) => {
     }
   }, [visibleProjects]);
   return (
-    <div className={s.container}>
-      <h2>MY PROJECTS</h2>
-      <ul className={s.list}>
-        {myProjects.slice(0, visibleProjects).map((project, index) => (
-          <motion.li
-            ref={index === visibleProjects - 1 ? lastItemRef : null}
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-            key={index + 1}
-            className={s.project}
-          >
-            <div className={s.textBlock}>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <a href={project.urlGit} className={s.link}>
-                View code on GitHub
-              </a>
-            </div>
-            <div className={s.imgBlock}>
-              <img src={project.img} alt={project.title} />
-              <a href={project.urlLive} className={s.link}>
-                Go live
-              </a>
-            </div>
-          </motion.li>
-        ))}
-      </ul>
-      {visibleProjects !== myProjects.length && (
-        <button onClick={addItem} className={s.button}>
-          Show more...
-        </button>
-      )}
+    <div className="section">
+      <div className={clsx("container", s.container)}>
+        <h2 className={s.title}>MY PROJECTS</h2>
+        <ul className={s.list}>
+          {myProjects.slice(0, visibleProjects).map((project, index) => (
+            <motion.li
+              ref={index === visibleProjects - 1 ? lastItemRef : null}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              key={index + 1}
+              className={s.project}
+            >
+              <div className={s.textBlock}>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <a href={project.urlGit} className="button">
+                  View code on GitHub
+                </a>
+              </div>
+              <div className={s.imgBlock}>
+                <img src={project.img} alt={project.title} />
+                <a href={project.urlLive} className="button">
+                  Go live
+                </a>
+              </div>
+            </motion.li>
+          ))}
+        </ul>
+        {visibleProjects !== myProjects.length && (
+          <button onClick={addItem} className="button">
+            Show more...
+          </button>
+        )}
+      </div>
     </div>
   );
 };

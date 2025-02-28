@@ -1,28 +1,27 @@
 .hero {
-  border: 1px solid rgba(146, 148, 248, 0.5);
-  color: rgb(255, 255, 255);
-  border-radius: 38px 5px 38px 5px;
   background-image: linear-gradient(
       to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
     url(../../images/hero.webp);
+  background-repeat: no-repeat;
+  background-position: center;
   box-shadow: inset 0 0 20px 5px rgba(0, 0, 0, 0.5);
   height: 600px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding: 30px;
-  font-size: 24px;
   justify-content: end;
   align-items: start;
-  margin-bottom: 15px;
+}
+.container {
+  width: 100%;
+  padding-bottom: 50px;
 }
 .title {
   text-shadow: 1px 1px 20px black;
   line-height: 0.8;
-  font-size: 56px;
+  font-size: 60px;
   & p {
     font-size: 24px;
   }
@@ -32,51 +31,7 @@
   font-size: 28px;
   font-weight: 100;
   text-decoration: overline;
-  text-shadow: 1px 1px 20px rgb(255, 255, 255);
 }
 .button {
-  box-shadow: 1px 1px 20px rgb(255, 255, 255);
-  font-weight: bold;
-  color: rgb(216, 216, 216);
-  border-radius: 18px 2px 18px 2px;
-  padding: 8px 40px;
-  outline: transparent;
-  border: 1px solid transparent;
-  transition: color 250ms ease-in-out;
-}
-.button:hover,
-.button:focus {
-  color: rgb(0, 0, 0);
-  border: 1px solid black;
-}
-
-.button {
-  text-decoration: none;
-  background-color: rgb(19, 4, 43);
-  position: relative;
-  overflow: hidden;
-}
-
-.button:hover {
-  background-color: rgba(146, 148, 248, 0.4);
-}
-
-.button:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(146, 148, 248, 0.4),
-    transparent
-  );
-  transition: all 650ms;
-}
-
-.button:hover:before {
-  left: 100%;
+  padding: 12px 50px;
 }

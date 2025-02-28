@@ -1,10 +1,11 @@
-.box {
+.section {
+  background-image: none;
   overflow: hidden;
+  padding: 0;
   margin-bottom: 15px;
 }
 .title {
   text-align: center;
-  color: white;
   font-size: 38px;
   padding: 15px 0;
 }
@@ -12,15 +13,14 @@
   max-width: 100%;
 }
 .subBox1 {
-  border: 1px solid rgba(146, 148, 248, 0.5);
   border-radius: 5px;
   place-items: center;
-  width: 120px;
-  height: 130px;
+  width: 140px;
+  height: 140px;
   padding: 15px 15px 2px;
   margin: 0 10px;
   text-align: center;
-  background-color: #223333dd;
+  background-image: linear-gradient(180deg, #181a2fd8 0%, #16182dd8 100%);
   & h3 {
     color: white;
     font-size: 14px;
@@ -28,6 +28,6 @@
 }
 .subBox2 {
   composes: subBox1;
-  background-color: #222233dd;
+  background-image: linear-gradient(180deg, #181e2fd8 0%, #161e2dd8 100%);
   margin-top: 15px;
 }

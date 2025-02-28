@@ -1,12 +1,10 @@
 import s from "./Logo.module.css";
+import logo from "/logo.png";
 
 const Logo: React.FC = () => {
   return (
     <div className={s.logo}>
-      <div>
-        TYMCHUK<span>DEVELOPER</span>
-      </div>
-      <p>Make your WEB world better...</p>
+      <img src={logo} alt="Tymchuk Developer Logo" />
     </div>
   );
 };

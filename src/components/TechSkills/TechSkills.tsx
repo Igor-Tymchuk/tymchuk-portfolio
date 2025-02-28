@@ -1,6 +1,7 @@
 import Marquee from "react-fast-marquee";
 import s from "./TechSkills.module.css";
 import { Item } from "../../assets/techSkills.ts";
+import clsx from "clsx";
 
 interface TechSkills {
   base: Item[];
@@ -9,7 +10,7 @@ interface TechSkills {
 
 const TechSkills: React.FC<TechSkills> = ({ base, additional }) => {
   return (
-    <div className={s.box}>
+    <div className={clsx("section", s.section)}>
       <h2 className={s.title}>TECH SKILLS</h2>
       <Marquee speed={50} pauseOnHover className={s.marquee}>
         {base.map((item, index) => (
