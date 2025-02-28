@@ -22,7 +22,7 @@ i18n.use(initReactI18next).init({
         my_projects: "Мої проєкти",
         contacts: "Контакти",
         hero_desc: "Я втілю ваші ідеї в функціональні та красиві програми!",
-        contact_me: "Зв'яжіться зі мною",
+        contact_me: "Зв'язатись зі мною",
       },
     },
   },
