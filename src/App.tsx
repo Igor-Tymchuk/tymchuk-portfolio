@@ -9,12 +9,21 @@ import MyProjects from "./components/MyProjects/MyProjects.tsx";
 import { myProjects } from "./assets/myProjects.ts";
 import Contacts from "./components/Contacts/Contacts.tsx";
 import Footer from "./components/Footer/Footer.tsx";
+import SplashCursor from "./components/SplashCursor/SplashCursor.tsx";
+import { useState } from "react";
 
 function App() {
+  const [magicCursor, setMagicCursor] = useState<boolean>(false);
+
+  const switchCursor = (): void => {
+    setMagicCursor(!magicCursor);
+  };
+
   return (
     <>
+      {magicCursor && <SplashCursor />}
       <Header />
-      <Hero />
+      <Hero switchCursor={switchCursor} />
       <AboutMe />
       <TechSkills base={baseSkills} additional={additionalSkills} />
       <MyProjects myProjects={myProjects} />

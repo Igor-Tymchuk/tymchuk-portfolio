@@ -4,6 +4,7 @@
   gap: 30px;
   justify-content: center;
   align-items: center;
+  padding-bottom: 30px;
 }
 .title {
   text-align: center;
@@ -16,13 +17,13 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 30px;
 }
 .project {
   display: flex;
   gap: 20px;
   border-bottom: 1px solid rgb(121, 121, 121);
-  padding-bottom: 15px;
+  padding-bottom: 30px;
 }
 .project:last-child {
   border-bottom: none;
@@ -49,7 +50,7 @@
   display: flex;
   position: relative;
   width: 50%;
-  box-shadow: 0px 4px 10px rgba(0, 255, 204, 0.3);
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
   & img {
     border-radius: 5px;
     object-fit: cover;

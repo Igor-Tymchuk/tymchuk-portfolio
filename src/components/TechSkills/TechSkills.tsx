@@ -11,6 +11,18 @@ interface TechSkills {
 const TechSkills: React.FC<TechSkills> = ({ base, additional }) => {
   return (
     <div className={clsx("section", s.section)}>
+      <h2 className={s.title}>SOFT SKILLS</h2>
+      <ul>
+        <li>- Teamwork;</li>
+        <li>- Stress resistance and moral strength;</li>
+        <li>- Flexibility;</li>
+        <li>- Endurance;</li>
+        <li>- Learned to make decisions faster.</li>
+        <li>- Complex solution of complex problems;</li>
+        <li>- Creativity, originality and initiative;</li>
+        <li>- Adaptation to new conditions;</li>
+      </ul>
+
       <h2 className={s.title}>TECH SKILLS</h2>
       <Marquee speed={50} pauseOnHover className={s.marquee}>
         {base.map((item, index) => (

@@ -1,14 +1,23 @@
 .container {
   display: flex;
+  flex-direction: column;
   gap: 30px;
   justify-content: space-between;
   align-items: start;
   text-shadow: 1px 1px 20px black;
 }
+
+.title {
+  width: 100%;
+  text-align: center;
+  font-size: 38px;
+}
+.content {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 30px;
+}
 .textBlock {
-  & h2 {
-    margin-left: 15px;
-  }
   & h3 {
     margin-top: 20px;
     margin-left: 15px;

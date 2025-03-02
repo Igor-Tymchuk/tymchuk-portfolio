@@ -4,9 +4,21 @@
   gap: 30px;
   justify-content: center;
   align-items: center;
+  padding-bottom: 30px;
 }
 .title {
   text-align: center;
   color: white;
   font-size: 38px;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

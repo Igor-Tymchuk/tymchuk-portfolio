@@ -1,19 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "../../redux/store.ts";
-import {
-  setLanguage,
-  setAnimating,
-} from "../../redux/language/languageSlice.ts";
+import { setLanguage, setAnimating } from "../../redux/language/slice.ts";
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
 import s from "./LanguageSwitcher.module.css";
-import { selectLang } from "../../redux/language/languageSelectors.ts";
+import { selectLang } from "../../redux/language/selectors.ts";
 
 const LanguageSwitcher = () => {
   const dispatch: AppDispatch = useDispatch();
   const { lang, isAnimating } = useSelector(selectLang);
 
   const changeLanguage = (newLang: "ua" | "en") => {
+    if (lang === newLang) return;
     const bodyElement = document.body;
     bodyElement.classList.remove("fadeIn");
     bodyElement.classList.add("animating");

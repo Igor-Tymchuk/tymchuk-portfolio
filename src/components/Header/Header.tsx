@@ -3,6 +3,7 @@ import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher.tsx";
 import Logo from "../Logo/Logo.tsx";
 import s from "./Header.module.css";
 import clsx from "clsx";
+import ChangeTheme from "../ChangeTheme/ChangeTheme.tsx";
 
 const Header: React.FC = () => {
   const { t } = useTranslation();
@@ -11,18 +12,21 @@ const Header: React.FC = () => {
       <div className={clsx("container", s.headerContainer)}>
         <Logo />
         <div className={s.navBox}>
-          <LanguageSwitcher />
           <nav className={s.navList}>
-            <a className="button" href="#">
+            <a className="button" href="#about-me">
               {t("about_me")}
             </a>
-            <a className="button" href="#">
+            <a className="button" href="#my-projects">
               {t("my_projects")}
             </a>
-            <a className="button" href="#">
+            <a className="button" href="#contacts">
               {t("contacts")}
             </a>
           </nav>
+        </div>{" "}
+        <div className={s.settings}>
+          <ChangeTheme />
+          <LanguageSwitcher />
         </div>
       </div>
     </header>

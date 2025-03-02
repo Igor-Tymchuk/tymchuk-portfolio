@@ -13,6 +13,9 @@ i18n.use(initReactI18next).init({
         hero_desc:
           "I will turn your ideas into functional and beautiful programs!",
         contact_me: "Contact Me",
+        light: "Light",
+        dark: "Dark",
+        theme: "Theme",
       },
     },
     ua: {
@@ -23,6 +26,9 @@ i18n.use(initReactI18next).init({
         contacts: "Контакти",
         hero_desc: "Я втілю ваші ідеї в функціональні та красиві програми!",
         contact_me: "Зв'язатись зі мною",
+        light: "Світла",
+        dark: "Темна",
+        theme: "Тема",
       },
     },
   },

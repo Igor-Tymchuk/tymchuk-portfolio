@@ -93,4 +93,8 @@ export const additionalSkills: Item[] = [
     img: "/icons/vercel.svg",
     title: "Vercel",
   },
+  {
+    img: "/icons/swagger.svg",
+    title: "Swagger",
+  },
 ];
