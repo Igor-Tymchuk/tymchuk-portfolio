@@ -1,15 +1,20 @@
 import clsx from "clsx";
 import s from "./Hero.module.css";
 import { useTranslation } from "react-i18next";
+import SplashCursor from "../SplashCursor/SplashCursor.tsx";
+import { useState } from "react";
 
-interface HeroProps {
-  switchCursor: () => void;
-}
-
-const Hero: React.FC<HeroProps> = ({ switchCursor }) => {
+const Hero: React.FC = () => {
   const { t } = useTranslation();
+  const [magicCursor, setMagicCursor] = useState<boolean>(false);
+
+  const switchCursor = (): void => {
+    setMagicCursor(!magicCursor);
+  };
+
   return (
     <div className={clsx("section", s.hero)}>
+      {magicCursor && <SplashCursor />}
       <div className={clsx("container", s.container)}>
         <h1 className={s.title}>
           <p>TYMCHUK</p> FULLSTACK DEVELOPER
