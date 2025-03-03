@@ -156,7 +156,9 @@ export default function SplashCursor({
 
       const halfFloatTexType = isWebGL2
         ? (gl as WebGL2RenderingContext).HALF_FLOAT
-        : (halfFloat && (halfFloat as any).HALF_FLOAT_OES) || 0;
+        : halfFloat !== null && "HALF_FLOAT_OES" in halfFloat
+        ? (halfFloat as { HALF_FLOAT_OES: number }).HALF_FLOAT_OES
+        : 0;
 
       let formatRGBA: any;
       let formatRG: any;

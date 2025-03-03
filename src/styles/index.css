@@ -7,6 +7,7 @@
   animation: start 0.8s ease-in-out;
 }
 html {
+  scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: #3a7bd5 #181a2f;
 }
@@ -37,10 +38,11 @@ html {
   border: 1px solid #00ffcc;
   padding: 4px 12px;
   transition: box-shadow 250ms ease-in-out,
-    background-position 250ms ease-in-out;
+    background-position 250ms ease-in-out, transform 250ms ease-in-out;
 }
 .button:hover,
 .button:focus {
+  transform: scale(1.05);
   box-shadow: 0px 0px 10px 5px rgba(0, 255, 204, 0.3);
   background-position: center;
 }

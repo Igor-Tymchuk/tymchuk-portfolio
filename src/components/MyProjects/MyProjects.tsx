@@ -51,9 +51,6 @@ const MyProjects: React.FC<MyProjectsProps> = ({ myProjects }) => {
               </div>
               <div className={s.imgBlock}>
                 <img src={project.img} alt={project.title} />
-                <a href={project.urlLive} className="button">
-                  Go live
-                </a>
               </div>
             </motion.li>
           ))}

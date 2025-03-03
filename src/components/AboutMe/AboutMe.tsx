@@ -1,6 +1,7 @@
 import s from "./AboutMe.module.css";
 import photo from "../../images/photo.webp";
 import clsx from "clsx";
+import ITTimeCounter from "../ITTimeCounter/ITTimeCounter.tsx";
 
 const AboutMe: React.FC = () => {
   return (
@@ -18,6 +19,11 @@ const AboutMe: React.FC = () => {
               About myself: Calm, attentive, optimistic, I have a sense of
               humor.
             </p>
+            <ITTimeCounter />
+            <img
+              src="https://ghchart.rshah.org/Igor-Tymchuk"
+              alt="GitHub chart"
+            />
           </div>
           <img
             src={photo}

@@ -12,15 +12,15 @@ const TechSkills: React.FC<TechSkills> = ({ base, additional }) => {
   return (
     <div className={clsx("section", s.section)}>
       <h2 className={s.title}>SOFT SKILLS</h2>
-      <ul>
-        <li>- Teamwork;</li>
-        <li>- Stress resistance and moral strength;</li>
-        <li>- Flexibility;</li>
-        <li>- Endurance;</li>
+      <ul className={clsx("container", s.list)}>
         <li>- Learned to make decisions faster.</li>
         <li>- Complex solution of complex problems;</li>
         <li>- Creativity, originality and initiative;</li>
         <li>- Adaptation to new conditions;</li>
+        <li>- Teamwork;</li>
+        <li>- Stress resistance and moral strength;</li>
+        <li>- Flexibility;</li>
+        <li>- Endurance;</li>
       </ul>
 
       <h2 className={s.title}>TECH SKILLS</h2>

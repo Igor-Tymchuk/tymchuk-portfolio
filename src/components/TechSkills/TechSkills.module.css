@@ -9,6 +9,10 @@
   font-size: 38px;
   padding: 15px 0;
 }
+.list {
+  column-count: 2;
+  column-gap: 30px;
+}
 .marquee {
   max-width: 100%;
 }

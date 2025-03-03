@@ -1,13 +1,14 @@
 import clsx from "clsx";
 import Logo from "../Logo/Logo.tsx";
 import s from "./Footer.module.css";
+import SocialLinks from "../SocialLinks/SocialLinks.tsx";
 
 const Footer: React.FC = () => {
   return (
     <footer className="section">
       <div className={clsx("container", s.container)}>
         <Logo />
-        <img src="https://ghchart.rshah.org/Igor-Tymchuk" alt="GitHub chart" />
+        <SocialLinks />
         <p>All rights reserved &copy; 2025</p>
       </div>
     </footer>

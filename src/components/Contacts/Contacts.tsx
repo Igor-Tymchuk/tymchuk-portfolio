@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import s from "./Contacts.module.css";
 import Location from "../Location/Location.tsx";
+import { FaDownload } from "react-icons/fa";
 
 const Contacts: React.FC = () => {
   return (
@@ -33,7 +34,9 @@ const Contacts: React.FC = () => {
             </ul>
             <div className={s.resume}>
               <span>Get My Resume in PDF-File</span>
-              <button className="button">Download</button>
+              <button className="button">
+                <FaDownload className={s.icon} /> Download
+              </button>
             </div>
           </div>
           <Location />
