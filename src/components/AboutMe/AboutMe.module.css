@@ -1,3 +1,7 @@
+.about {
+  scroll-margin-top: 100px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -18,6 +22,9 @@
   padding-bottom: 30px;
 }
 .textBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   & h3 {
     margin-top: 20px;
     margin-left: 15px;

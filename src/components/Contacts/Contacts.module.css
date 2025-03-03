@@ -1,3 +1,7 @@
+.contacts {
+  scroll-margin-top: 100px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -15,10 +19,37 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  gap: 20px;
+  gap: 40px;
 }
 .info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 90%;
+  & ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 5px;
+    border: 1px solid #00ffcc;
+    box-shadow: inset 0px 0px 10px 5px rgba(0, 255, 204, 0.3);
+    padding: 20px;
+    background-color: #0c0e18d5;
+    margin-bottom: 20px;
+  }
+}
+.item {
+  line-height: 1;
+  color: #00ffcc;
+  & span {
+    color: white;
+    font-size: 20px;
+  }
+}
+.resume {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }

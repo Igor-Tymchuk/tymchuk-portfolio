@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
             {t("contact_me")}
           </button>
           <button
-            className={clsx("button")}
+            className={clsx("button", s.magicBtn)}
             onClick={(e) => {
               switchCursor();
               e.currentTarget.blur();

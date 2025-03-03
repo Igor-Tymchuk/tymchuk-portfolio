@@ -29,7 +29,7 @@ const MyProjects: React.FC<MyProjectsProps> = ({ myProjects }) => {
     }
   }, [visibleProjects]);
   return (
-    <div className="section" id="my-projects">
+    <div className={clsx("section", s.projects)} id="my-projects">
       <div className={clsx("container", s.container)}>
         <h2 className={s.title}>MY PROJECTS</h2>
         <ul className={s.list}>

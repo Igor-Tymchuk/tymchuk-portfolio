@@ -5,30 +5,30 @@ import { FaDownload } from "react-icons/fa";
 
 const Contacts: React.FC = () => {
   return (
-    <div className="section" id="contacts">
+    <div className={clsx("section", s.contacts)} id="contacts">
       <div className={clsx("container", s.container)}>
         <h2>MY CONTACTS</h2>
         <div className={s.content}>
           <div className={s.info}>
             <ul>
-              <li>
-                E-mail:
+              <li className={s.item}>
+                <p>E-mail:</p>
                 <span>tymchuk.developer@gmail.com</span>
               </li>
-              <li>
-                Phone:
+              <li className={s.item}>
+                <p>Phone number:</p>
                 <span>+38 (096) 131-22-45</span>
               </li>
-              <li>
-                LinkedIn:
-                <span>https://www.linkedin.com/in/igor-tymchuk/</span>
+              <li className={s.item}>
+                <p>LinkedIn:</p>
+                <span>https://www.linkedin.com/in/igor-tymchuk</span>
               </li>
-              <li>
-                Telegram:
+              <li className={s.item}>
+                <p>Telegram:</p>
                 <span>@Tymchuk_Developer</span>
               </li>
-              <li>
-                GitHub:
+              <li className={s.item}>
+                <p>GitHub:</p>
                 <span>https://github.com/Igor-Tymchuk</span>
               </li>
             </ul>

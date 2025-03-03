@@ -16,6 +16,7 @@ i18n.use(initReactI18next).init({
         light: "Light",
         dark: "Dark",
         theme: "Theme",
+        my_it_journey: "My IT Journey",
       },
     },
     ua: {
@@ -29,6 +30,7 @@ i18n.use(initReactI18next).init({
         light: "Світла",
         dark: "Темна",
         theme: "Тема",
+        my_it_journey: "Моя IT-подорож:",
       },
     },
   },

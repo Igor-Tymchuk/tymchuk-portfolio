@@ -8,7 +8,7 @@ import ChangeTheme from "../ChangeTheme/ChangeTheme.tsx";
 const Header: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <header className="section">
+    <header className={clsx("section", s.header)}>
       <div className={clsx("container", s.headerContainer)}>
         <Logo />
         <div className={s.navBox}>

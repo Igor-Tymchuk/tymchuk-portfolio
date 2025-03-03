@@ -5,7 +5,7 @@ import ITTimeCounter from "../ITTimeCounter/ITTimeCounter.tsx";
 
 const AboutMe: React.FC = () => {
   return (
-    <div className="section" id="about-me">
+    <div className={clsx("section", s.about)} id="about-me">
       <div className={clsx("container", s.container)}>
         <h2 className={s.title}>ABOUT ME</h2>
         <div className={s.content}>

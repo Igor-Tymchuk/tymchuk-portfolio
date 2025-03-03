@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import s from "./ITTimeCounter.module.css";
+import { useTranslation } from "react-i18next";
 
 interface ITTime {
   years: number;
@@ -19,7 +20,7 @@ const ITTimeCounter: React.FC = () => {
     minutes: 0,
     seconds: 0,
   });
-
+  const { t } = useTranslation();
   useEffect(() => {
     const startDate = new Date("2024-04-05");
     const mathCount = () => {
@@ -47,41 +48,43 @@ const ITTimeCounter: React.FC = () => {
         minutes,
         seconds,
       });
-      };
-      mathCount();
-      const interval = setInterval(mathCount,1000)
+    };
+    mathCount();
+    const interval = setInterval(mathCount, 1000);
 
     return () => clearInterval(interval);
   }, []);
   const { years, months, days, hours, minutes, seconds } = elapsedTime;
   return (
-    <div>
-      <h1>Час в IT:</h1>
-      {years > 0 && (
+    <div className={s.box}>
+      <h1>{t("my_it_journey")}</h1>
+      <div>
+        {years > 0 && (
+          <span className={s.count}>
+            {years}
+            <span className={s.text}>y </span>
+          </span>
+        )}
         <span className={s.count}>
-          {years}
-          <span className={s.text}>y </span>
+          {months}
+          <span className={s.text}>m </span>
         </span>
-      )}
-      <span className={s.count}>
-        {months}
-        <span className={s.text}>m </span>
-      </span>
-      <span className={s.count}>
-        {days}
-        <span className={s.text}>d </span>
-      </span>
-      <span className={s.count}>
-        {hours}
-        <span className={s.text}>h </span>
-      </span>
-      <span className={s.count}>
-        {minutes} <span className={s.text}>min </span>
-      </span>
-      <span className={s.count}>
-        {seconds}
-        <span className={s.text}>sec</span>
-      </span>
+        <span className={s.count}>
+          {days}
+          <span className={s.text}>d </span>
+        </span>
+        <span className={s.count}>
+          {hours}
+          <span className={s.text}>h </span>
+        </span>
+        <span className={s.count}>
+          {minutes} <span className={s.text}>min </span>
+        </span>
+        <span className={s.count}>
+          {seconds}
+          <span className={s.text}>sec</span>
+        </span>
+      </div>
     </div>
   );
 };
