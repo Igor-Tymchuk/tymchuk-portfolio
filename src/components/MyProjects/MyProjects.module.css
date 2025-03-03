@@ -42,7 +42,6 @@
   text-shadow: 1px 1px 20px rgb(0, 0, 0);
   & h3 {
     color: dodgerblue;
-
     text-align: center;
   }
   & a {
@@ -58,12 +57,5 @@
   & img {
     border-radius: 5px;
     object-fit: cover;
-  }
-  & a {
-    position: absolute;
-    bottom: 5px;
-    right: 50%;
-    transform: translateX(50%);
-    border-radius: 18px;
   }
 }

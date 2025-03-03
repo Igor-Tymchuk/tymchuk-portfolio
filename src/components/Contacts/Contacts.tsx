@@ -32,14 +32,14 @@ const Contacts: React.FC = () => {
                 <span>https://github.com/Igor-Tymchuk</span>
               </li>
             </ul>
-            <div className={s.resume}>
-              <span>Get My Resume in PDF-File</span>
-              <button className="button">
-                <FaDownload className={s.icon} /> Download
-              </button>
-            </div>
           </div>
           <Location />
+        </div>
+        <div className={s.resume}>
+          <span>Get My Resume in PDF-File</span>
+          <button className="button">
+            <FaDownload className={s.icon} /> Download
+          </button>
         </div>
       </div>
     </div>

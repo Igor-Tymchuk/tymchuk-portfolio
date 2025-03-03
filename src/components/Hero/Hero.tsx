@@ -3,6 +3,7 @@ import s from "./Hero.module.css";
 import { useTranslation } from "react-i18next";
 import SplashCursor from "../SplashCursor/SplashCursor.tsx";
 import { useState } from "react";
+import Atom from "../Atom/Atom.tsx";
 
 const Hero: React.FC = () => {
   const { t } = useTranslation();
@@ -16,22 +17,28 @@ const Hero: React.FC = () => {
     <div className={clsx("section", s.hero)}>
       {magicCursor && <SplashCursor />}
       <div className={clsx("container", s.container)}>
-        <h1 className={s.title}>
-          <p>TYMCHUK</p> FULLSTACK DEVELOPER
-        </h1>
-        <h2 className={s.description}>{t("hero_desc")}</h2>
-        <div className={s.buttons}>
-          <button className={clsx("button", s.button)}>
+        <Atom />
+        <div>
+          <h1 className={s.title}>
+            <p>TYMCHUK</p> FULLSTACK DEVELOPER
+          </h1>
+          <h2 className={s.description}>{t("hero_desc")}</h2>
+          <button className={clsx(s.heroBtn)}>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
             {t("contact_me")}
           </button>
           <button
-            className={clsx("button", s.magicBtn)}
+            className={clsx(s.button, magicCursor && s.magic)}
             onClick={(e) => {
               switchCursor();
               e.currentTarget.blur();
             }}
           >
-            Enable Magic Cursor
+            <span>Magic</span>
+            <div className={s.liquid}></div>
           </button>
         </div>
       </div>
