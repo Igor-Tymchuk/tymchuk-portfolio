@@ -68,6 +68,7 @@
   }
 }
 .button {
+  opacity: 0.5;
   position: absolute;
   right: 0;
   bottom: 0;

@@ -54,7 +54,7 @@ const MyProjects: React.FC<MyProjectsProps> = ({ myProjects }) => {
               <div className={s.imgBlock}>
                 <img src={project.img} alt={project.title} />
                 <a
-                  href={project.urlGit}
+                  href={project.urlLive}
                   className={clsx("button", s.button)}
                   target="_blank"
                 >
