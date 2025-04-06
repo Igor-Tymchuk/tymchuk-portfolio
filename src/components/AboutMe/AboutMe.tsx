@@ -20,10 +20,14 @@ const AboutMe: React.FC = () => {
               humor.
             </p>
             <ITTimeCounter />
-            <img
-              src="https://ghchart.rshah.org/Igor-Tymchuk"
-              alt="GitHub chart"
-            />
+            <div className={s.chart}>
+              <img
+                src="https://ghchart.rshah.org/Igor-Tymchuk"
+                alt="GitHub chart"
+                width={663}
+                height={104}
+              />
+            </div>
           </div>
           <img
             src={photo}

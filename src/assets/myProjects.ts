@@ -10,7 +10,7 @@ import img from "../images/hero.webp";
 
 export const myProjects: MyProject[] = [
   {
-    title: "Test",
+    title: "Test1",
     description:
       "It is my projects Lorem, ipsum dolor sit amet consectetur adipisicing elit. At delectus consectetur quo quasi aut, soluta rerum? Quasi earum hic impedit!",
     img,
@@ -18,7 +18,7 @@ export const myProjects: MyProject[] = [
     urlLive: "http://example",
   },
   {
-    title: "Test",
+    title: "Test2",
     description:
       "It is my projects Lorem, ipsum dolor sit amet consectetur adipisicing elit. At delectus consectetur quo quasi aut, soluta rerum? Quasi earum hic impedit!",
     img,
@@ -26,7 +26,7 @@ export const myProjects: MyProject[] = [
     urlLive: "http://example",
   },
   {
-    title: "Test",
+    title: "Test3",
     description:
       "It is my projects Lorem, ipsum dolor sit amet consectetur adipisicing elit. At delectus consectetur quo quasi aut, soluta rerum? Quasi earum hic impedit!",
     img,
@@ -34,7 +34,7 @@ export const myProjects: MyProject[] = [
     urlLive: "http://example",
   },
   {
-    title: "Test",
+    title: "Test4",
     description:
       "It is my projects Lorem, ipsum dolor sit amet consectetur adipisicing elit. At delectus consectetur quo quasi aut, soluta rerum? Quasi earum hic impedit!",
     img,

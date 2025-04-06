@@ -11,9 +11,11 @@ interface MyProjectsProps {
 const MyProjects: React.FC<MyProjectsProps> = ({ myProjects }) => {
   const [visibleProjects, setVisibleProjects] = useState<number>(2);
   const lastItemRef = useRef<HTMLLIElement | null>(null);
+  const reverseProjects = myProjects.slice().reverse();
+  console.log(reverseProjects);
 
   const addItem = () => {
-    if (visibleProjects < myProjects.length) {
+    if (visibleProjects < reverseProjects.length) {
       setVisibleProjects((prev) => prev + 1);
     }
   };
@@ -33,7 +35,7 @@ const MyProjects: React.FC<MyProjectsProps> = ({ myProjects }) => {
       <div className={clsx("container", s.container)}>
         <h2 className={s.title}>MY PROJECTS</h2>
         <ul className={s.list}>
-          {myProjects.slice(0, visibleProjects).map((project, index) => (
+          {reverseProjects.slice(0, visibleProjects).map((project, index) => (
             <motion.li
               ref={index === visibleProjects - 1 ? lastItemRef : null}
               initial={{ opacity: 0, y: -10 }}
@@ -45,17 +47,24 @@ const MyProjects: React.FC<MyProjectsProps> = ({ myProjects }) => {
               <div className={s.textBlock}>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                <a href={project.urlGit} className="button">
+                <a href={project.urlGit} className="button" target="_blank">
                   View code on GitHub
                 </a>
               </div>
               <div className={s.imgBlock}>
                 <img src={project.img} alt={project.title} />
+                <a
+                  href={project.urlGit}
+                  className={clsx("button", s.button)}
+                  target="_blank"
+                >
+                  Go live
+                </a>
               </div>
             </motion.li>
           ))}
         </ul>
-        {visibleProjects !== myProjects.length && (
+        {visibleProjects !== reverseProjects.length && (
           <button onClick={addItem} className="button">
             Show more...
           </button>

@@ -17,6 +17,13 @@
 
 .project:nth-child(even) {
   flex-direction: row-reverse;
+  & .button {
+    left: 0;
+    right: auto;
+  }
+  .textBlock a {
+    align-self: self-end;
+  }
 }
 .list {
   display: flex;
@@ -45,7 +52,8 @@
     text-align: center;
   }
   & a {
-    align-self: end;
+    margin: 5px;
+    align-self: self-start;
   }
 }
 
@@ -57,5 +65,14 @@
   & img {
     border-radius: 5px;
     object-fit: cover;
+  }
+}
+.button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+  &:hover {
+    background-color: #000000a8;
   }
 }
