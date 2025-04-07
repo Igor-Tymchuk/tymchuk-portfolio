@@ -78,6 +78,10 @@ export const additionalSkills: Item[] = [
     title: "NPM",
   },
   {
+    img: "/icons/express.svg",
+    title: "Express.JS",
+  },
+  {
     img: "/icons/postman.svg",
     title: "Postman",
   },

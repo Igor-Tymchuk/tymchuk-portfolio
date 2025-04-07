@@ -11,6 +11,7 @@ import backendAquaTrack from "../images/backendAquaTrack.webp";
 import backendContacts from "../images/backendContacts.webp";
 import callOfVictory from "../images/callOfVictory.webp";
 import movieInfo from "../images/movieInfo.webp";
+import phoneBook from "../images/phoneBook.webp";
 import portfolio from "../images/portfolio.webp";
 import searchImages from "../images/searchImages.webp";
 import searchImagesTS from "../images/searchImagesTS.webp";
@@ -58,6 +59,14 @@ export const myProjects: MyProject[] = [
     img: movieInfo,
     urlGit: "https://github.com/Igor-Tymchuk/goit-react-hw-05",
     urlLive: "https://goit-react-hw-05-two-zeta.vercel.app/",
+  },
+  {
+    title: "PhoneBook",
+    description:
+      "It is my projects Lorem, ipsum dolor sit amet consectetur adipisicing elit. At delectus consectetur quo quasi aut, soluta rerum? Quasi earum hic impedit!",
+    img: phoneBook,
+    urlGit: "https://github.com/Igor-Tymchuk/goit-react-hw-08",
+    urlLive: "https://goit-react-hw-08-ebon-six.vercel.app/",
   },
   {
     title: "Search Images and photos [TS]",
