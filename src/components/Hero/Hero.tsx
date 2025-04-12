@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
           <h1 className={s.title}>
             <p>TYMCHUK</p> FULLSTACK DEVELOPER
           </h1>
-          <h2 className={s.description}>{t("hero_desc")}</h2>
+          <h3 className={s.description}>{t("hero_desc")}</h3>
           <button className={clsx(s.heroBtn)}>
             <span></span>
             <span></span>
@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
               e.currentTarget.blur();
             }}
           >
-            <span>Magic</span>
+            <span>{t("magic")}</span>
             <div className={s.liquid}></div>
           </button>
         </div>

@@ -93,7 +93,7 @@ export const myProjects: MyProject[] = [
     urlLive: "https://aquacoders.onrender.com/api-docs/",
   },
   {
-    title: "AquaTrack",
+    title: "Aqua Track",
     description:
       "It is my projects Lorem, ipsum dolor sit amet consectetur adipisicing elit. At delectus consectetur quo quasi aut, soluta rerum? Quasi earum hic impedit!",
     img: aquaTrack,

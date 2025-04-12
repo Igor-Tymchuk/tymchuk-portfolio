@@ -3,6 +3,7 @@ import s from "./MyProjects.module.css";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import clsx from "clsx";
+import { useTranslation } from "react-i18next";
 
 interface MyProjectsProps {
   myProjects: MyProject[];
@@ -12,7 +13,7 @@ const MyProjects: React.FC<MyProjectsProps> = ({ myProjects }) => {
   const [visibleProjects, setVisibleProjects] = useState<number>(2);
   const lastItemRef = useRef<HTMLLIElement | null>(null);
   const reverseProjects = myProjects.slice().reverse();
-  console.log(reverseProjects);
+  const { t } = useTranslation();
 
   const addItem = () => {
     if (visibleProjects < reverseProjects.length) {
@@ -33,7 +34,7 @@ const MyProjects: React.FC<MyProjectsProps> = ({ myProjects }) => {
   return (
     <div className={clsx("section", s.projects)} id="my-projects">
       <div className={clsx("container", s.container)}>
-        <h2 className={s.title}>MY PROJECTS</h2>
+        <h2 className={s.title}>{t("my_projects")}</h2>
         <ul className={s.list}>
           {reverseProjects.slice(0, visibleProjects).map((project, index) => (
             <motion.li
@@ -48,7 +49,7 @@ const MyProjects: React.FC<MyProjectsProps> = ({ myProjects }) => {
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 <a href={project.urlGit} className="button" target="_blank">
-                  View code on GitHub
+                  {t("view_gh_btn")}
                 </a>
               </div>
               <div className={s.imgBlock}>
@@ -58,7 +59,7 @@ const MyProjects: React.FC<MyProjectsProps> = ({ myProjects }) => {
                   className={clsx("button", s.button)}
                   target="_blank"
                 >
-                  Go live
+                  {t("live_btn")}
                 </a>
               </div>
             </motion.li>
@@ -66,7 +67,7 @@ const MyProjects: React.FC<MyProjectsProps> = ({ myProjects }) => {
         </ul>
         {visibleProjects !== reverseProjects.length && (
           <button onClick={addItem} className="button">
-            Show more...
+            {t("show_more_btn")}
           </button>
         )}
       </div>

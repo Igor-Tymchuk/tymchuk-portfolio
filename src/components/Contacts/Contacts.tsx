@@ -4,19 +4,21 @@ import Location from "../Location/Location.tsx";
 import { FaDownload, FaTelegramPlane, FaPhoneAlt } from "react-icons/fa";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
+import { useTranslation } from "react-i18next";
 
 const Contacts: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className={clsx("section", s.contacts)} id="contacts">
       <div className={clsx("container", s.container)}>
-        <h2>MY CONTACTS</h2>
+        <h2>{t("my_contacts")}</h2>
         <div className={s.content}>
           <div className={s.info}>
             <ul>
               <li className={s.item}>
                 <p>
                   <SiGmail className={s.icon} />
-                  E-mail:
+                  {t("email")}
                 </p>
                 <a
                   href="mailto:tymchuk.developer@gmail.com"
@@ -29,7 +31,7 @@ const Contacts: React.FC = () => {
               <li className={s.item}>
                 <p>
                   <FaPhoneAlt className={s.icon} />
-                  Phone number:
+                  {t("phone")}
                 </p>
                 <a
                   href="tel:+380961312245"
@@ -83,10 +85,10 @@ const Contacts: React.FC = () => {
           <Location />
         </div>
         <div className={s.resume}>
-          <span>Get My Resume in PDF-File</span>
+          <span>{t("get_my_resume")}</span>
           <button className="button">
             <FaDownload className={s.icon} />
-            Download
+            {t("download")}
           </button>
         </div>
       </div>

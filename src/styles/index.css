@@ -117,3 +117,6 @@ html {
   height: 0;
   background-color: #3a7bd5;
 }
+h2 {
+  text-transform: uppercase;
+}

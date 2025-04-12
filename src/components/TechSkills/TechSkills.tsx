@@ -2,6 +2,7 @@ import Marquee from "react-fast-marquee";
 import s from "./TechSkills.module.css";
 import { Item } from "../../assets/techSkills.ts";
 import clsx from "clsx";
+import { useTranslation } from "react-i18next";
 
 interface TechSkills {
   base: Item[];
@@ -9,21 +10,22 @@ interface TechSkills {
 }
 
 const TechSkills: React.FC<TechSkills> = ({ base, additional }) => {
+  const { t } = useTranslation();
   return (
     <div className={clsx("section", s.section)}>
-      <h2 className={s.title}>SOFT SKILLS</h2>
+      <h2 className={s.title}>{t("soft_skills")}</h2>
       <ul className={clsx("container", s.list)}>
-        <li>- Learned to make decisions faster.</li>
-        <li>- Complex solution of complex problems;</li>
-        <li>- Creativity, originality and initiative;</li>
-        <li>- Adaptation to new conditions;</li>
-        <li>- Teamwork;</li>
-        <li>- Stress resistance and moral strength;</li>
-        <li>- Flexibility;</li>
-        <li>- Endurance;</li>
+        <li>{t("soft1")}</li>
+        <li>{t("soft2")}</li>
+        <li>{t("soft3")}</li>
+        <li>{t("soft4")}</li>
+        <li>{t("soft5")}</li>
+        <li>{t("soft6")}</li>
+        <li>{t("soft7")}</li>
+        <li>{t("soft8")}</li>
       </ul>
 
-      <h2 className={s.title}>TECH SKILLS</h2>
+      <h2 className={s.title}>{t("tech_skills")}</h2>
       <Marquee speed={50} pauseOnHover className={s.marquee}>
         {base.map((item, index) => (
           <div key={index} className={s.subBox1}>

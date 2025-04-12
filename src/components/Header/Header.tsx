@@ -20,7 +20,7 @@ const Header: React.FC = () => {
               {t("my_projects")}
             </a>
             <a className="button" href="#contacts">
-              {t("contacts")}
+              {t("my_contacts")}
             </a>
           </nav>
         </div>{" "}

@@ -62,27 +62,27 @@ const ITTimeCounter: React.FC = () => {
         {years > 0 && (
           <span className={s.count}>
             {years}
-            <span className={s.text}>y </span>
+            <span className={s.text}>{t("years")}&nbsp;</span>
           </span>
         )}
         <span className={s.count}>
           {months}
-          <span className={s.text}>m </span>
+          <span className={s.text}>{t("months")}&nbsp;</span>
         </span>
         <span className={s.count}>
           {days}
-          <span className={s.text}>d </span>
+          <span className={s.text}>{t("days")}&nbsp;</span>
         </span>
         <span className={s.count}>
           {hours}
-          <span className={s.text}>h </span>
+          <span className={s.text}>{t("hours")}&nbsp;</span>
         </span>
         <span className={s.count}>
-          {minutes} <span className={s.text}>min </span>
+          {minutes} <span className={s.text}>{t("minutes")}&nbsp;</span>
         </span>
         <span className={s.count}>
           {seconds}
-          <span className={s.text}>sec</span>
+          <span className={s.text}>{t("seconds")}</span>
         </span>
       </div>
     </div>
